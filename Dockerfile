@@ -9,7 +9,7 @@ RUN npm ci --legacy-peer-deps
 
 COPY . .
 
-RUN npm run build
+RUN npm run build -- --configuration production
 
 # Stage 2: Serve using Nginx
 FROM nginx:alpine
